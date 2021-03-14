@@ -1,0 +1,768 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional" "https://www.w3.=
+org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns=3D"http://www.w3.org/1999/xhtml" lang=3D"en" xml:lang=3D"en" st=yle=3D"margin: 0;padding: 0;border: 0;">
+
+<head>
+  <meta http-equiv=3D"Content-T=ype" content=3D"text/html; charset=3DUTF-8">
+  <title>Bulletproof emails with MJML 14 Mart 2021</title>
+
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width">
+  <meta name=3D"robots" content=3D"noindex, nofollow">
+  <meta name=3D"googlebot" content=3D"noindex, nofollow, noarchive">
+
+  <style type=3D"text/css">
+    img+div {
+      display: none !important;
+
+      /* Hides image downloading in Gmail *=
+/
+        }
+
+        @media screen and (max-width: 600px) {
+            /** Gmail **/
+      *[class=3D"Gmail"] {
+        display: none !important
+      }
+
+      /** Wrapper **/
+      .Wrapper {
+        max-width: 600px !important;
+        min-width: 320px !important;
+        width: 100% !important;
+        border-radius: 0 !important;
+      }
+
+      .Section {
+        width: 100% !important;
+      }
+
+      .Section--last {
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+      }
+
+      .Callout {
+        border-radius: 0 !important;
+      }
+
+      /** Notice **/
+      .Notice {
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+      }
+
+      /** Header **/
+      .Header .Header-left,
+      .Header .Header-right {
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+      }
+
+      /** Content **/
+      .Content {
+        width: auto !important;
+      }
+
+      /** Divider **/
+      .Divider--kill {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+      }
+
+      /** Spacer **/
+      .Spacer--gutter {
+        width: 20px !important;
+      }
+
+      .Spacer--kill {
+        height: 0 !important;
+        width: 0 !important;
+      }
+
+      .Spacer--emailEnds {
+        height: 0 !important;
+      }
+
+      /** Target **/
+      .Target img {
+        display: none !important;
+        height: 0 !important;
+        margin: 0 !important;
+        max-height: 0 !important;
+        min-height: 0 !important;
+        mso-hide: all !important;
+        padding: 0 !important;
+        width: 0 !important;
+        font-size: 0 !important;
+        line-height: 0 !important;
+      }
+
+      .Target::before {
+        content: '' !important;
+        display: block !important;
+      }
+
+      /** Header **/
+      .Header-area {
+        width: 100% !important;
+      }
+
+      .Header-left,
+      .Header-left::before,
+      .Header-right,
+      .Header-right::before {
+        height: 156px !important;
+        width: auto !important;
+        background-size: 252px 156px !important;
+      }
+
+      .Header-left {
+        background-image: url('https://kommunity.com/img/email/Left=
+.png') !important;
+background-position: bottom right !important;
+        }
+
+        .Header-right {
+          background-image: url('https://kommunity.com/img/email/Righ=
+t.png') !important;
+background-position: bottom left !important;
+          }
+
+          .Header-icon,
+          .Header-icon::before {
+            width: 96px !important;
+            height: 156px !important;
+            background-size: 96px 156px !important;
+          }
+
+          .Header-icon {
+            width: 96px !important;
+            height: 156px !important;
+            background-image: url('https://kommunity.com/img/email/twel=
+ve_degree_icon@2x.png') !important;
+background-position: bottom center !important;
+            }
+
+            /** Table **/
+            .Table-content {
+              width: auto !important;
+            }
+
+            .Table-rows {
+              width: 100% !important;
+            }
+          }
+
+          @media screen and (max-width: 599px) {
+
+            /** Data Blocks **/
+            .DataBlocks-item {
+              display: block !important;
+              width: 100% !important;
+            }
+
+            .DataBlocks-spacer {
+              display: block !important;
+              height: 12px !important;
+              width: auto !important;
+            }
+          }
+
+          span.Delink a {
+            color: inherit !important;
+            text-decoration: none !important;
+          }
+
+          a {
+            text-decoration: none !important;
+          }
+
+          /* overrides addresses, numbers, etc. being linked */
+          span.apple-override-header a {
+            color: #000000 !important;
+            text-decoration: none !important;
+          }
+
+          span.apple-override-hidden a {
+            color: #ffbc00 !important;
+            text-decoration: none !important;
+          }
+
+          span.apple-override-dark a {
+            color: #292e31 !important;
+            text-decoration: none !important;
+          }
+
+          span.apple-override-light a {
+            color: #77858c !important;
+            text-decoration: none !important;
+          }
+
+          /* [override] prevents Yahoo Mail breaking media queries */
+
+          /* retina */
+          @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120=dpi) {
+
+            body[override] span.retina img {
+              visibility: hidden !important;
+            }
+
+            body[override] td.icon span.retina {
+              background: url('https://kommunity.com/img/email/circular_i=
+con@2x.png') no-repeat 0 0 !important;
+background-size: 72px 72px !important;
+                display: block !important;
+                height: 72px !important;
+                width: 72px !important;
+              }
+
+              body[override] table.card td.card-type span.retina {
+                display: block !important;
+                height: 16px !important;
+              }
+            }
+
+            /* tablets */
+            @media all and (max-device-width: 768px) {
+
+              body[override] span.retina img {
+                visibility: hidden !important;
+              }
+
+              body[override] td.font-large, body[override] td.font-large span=, body[override] td.font-large a {
+                font-size: 18px !important;
+                line-height: 25px !important;
+              }
+
+              body[override] td.font-medium, body[override] td.font-medium sp=an, body[override] td.font-medium a {
+                font-size: 16px !important;
+                line-height: 23px !important;
+              }
+
+              body[override] td.font-small, body[override] td.font-small span=, body[override] td.font-small a {
+                font-size: 15px !important;
+                line-height: 21px !important;
+              }
+
+              body[override] td.icon span.retina {
+                background: url('https://kommunity.com/img/email/circular_i=
+con@2x.png') no-repeat 0 0 !important;
+background-size: 72px 72px !important;
+                  display: block !important;
+                  height: 72px !important;
+                  width: 72px !important;
+                }
+
+                body[override] td.title, body[override] td.title span, body[ove=rride] td.title a {
+                  font-size: 24px !important;
+                  line-height: 28px !important;
+                }
+
+                body[override] table.card td.card-type span.retina {
+                  display: block !important;
+                  height: 19px !important;
+                }
+
+                /* */
+                body[override] table.card td.card-digits, body[override] table.=card td.card-digits span {
+                  font-size: 16px !important;
+                  line-height: 16px !important;
+                }
+
+                body[override] td.summary-total {
+                  font-size: 20px !important;
+                  line-height: 25px !important;
+                }
+
+              }
+
+              /* mobile */
+              @media all and (max-device-width: 500px) {
+
+                body[override] table.width, body[override] td.width {
+                  width: 100% !important;
+                }
+
+                body[override] td.temp-padding, body[override] td.temp-padding=div.clear {
+                  display: none !important;
+                  width: 0 !important;
+                }
+
+                body[override] td.banner {
+                  height: 186px !important;
+                }
+
+                body[override] td.subbanner-item {
+                  -moz-box-sizing: border-box !important;
+                  -webkit-box-sizing: border-box !important;
+                  box-sizing: border-box !important;
+                  display: block !important;
+                  padding-left: 10px !important;
+                  padding-right: 10px !important;
+                  text-align: center !important;
+                  width: 100% !important;
+                }
+
+                body[override] tr.summary-item td.summary-padding, body[overrid=e] tr.summary-item td.summary-padding div.clear {
+                  width: 17px !important;
+                }
+
+                body[override] a.browser-link {
+                  display: block !important;
+                }
+
+              }
+  </style>
+
+<body class=3D"Email" style=3D"margin: 0;padding: 0;border: 0;background-co=lor: #f1f5f9;font-family: -apple-system,
+  BlinkMacSystemFont, &#39;Segoe UI&=#39;, Roboto, &#39;Helvetica Neue&#39;, Ubuntu,
+  sans-serif;-webkit-text-siz=e-adjust: 100%;-ms-text-size-adjust: 100%;min-width: 100% !important;width:=100%
+  !important;">
+  <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role==3D"presentation">
+    <tbody>
+      <tr>
+        <td class=3D"o_hide" align=3D"center" style=3D"display: none;font-s=ize: 0;max-height: 0;width: 0;line-height:
+          0;overflow: hidden;mso-hide: all=;visibility: hidden;">
+          E=C4=9Fer daha =C3=B6nce HTML e-posta =C5=9Fablonu haz=C4=B1rla=
+          d=C4=B1ysan=C4=B1z etkinlik ba=C5=9Fl=C4=B1=C4=9F=C4=B1 hislerinize zaten t=
+          erc=C3=BCman olmu=C5=9Ftur muhtemelen. Ama yine de bir a=C3=A7=C4=B1klama y=
+          apmak g...
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class=3D"Background" style=3D"min-width: 100%;width: 100%;background-c=olor: #f1f5f9;">
+    <table class=3D"Wrapper" align=3D"center" style=3D"border: 0;border-col=lapse: collapse;margin: 0 auto
+      !important;padding: 0;max-width: 600px;min-w=idth: 600px;width: 600px;">
+      <tbody>
+        <tr>
+          <td style=3D"border: 0;border-collapse: collapse;margin: 0;padd=ing: 0;-webkit-font-smoothing:
+            antialiased;-moz-osx-font-smoothing: graysca=le;">
+            <table class=3D"Divider Divider--small Divider--kill" width==3D"100%" style=3D"border: 0;border-collapse:
+              collapse;margin: 0;padding: 0=;">
+              <tbody>
+                <tr>
+                  <td class=3D"Spacer Spacer--divider" height=3D"20" style=3D"b=order: 0;border-collapse:
+                    collapse;margin: 0;padding: 0;-webkit-font-smooth=ing: antialiased;-moz-osx-font-smoothing:
+                    grayscale;color: #ffffff;font-siz=e: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;
+                  </td>
+                </tr>
+                </t= body>
+            </table>
+
+
+            <div class=3D"Shadow" style=3D"border-bottom-left-radius: 5=px;border-bottom-right-radius: 5px;box-shadow: 0
+              7px 14px 0 rgba(50,50,93,0=.10), 0 3px 6px 0 rgba(0,0,0,0.07);">
+              <table dir=3D"ltr" class=3D"Section Header" width=3D"10=0%" style=3D"border: 0;border-collapse:
+                collapse;margin: 0;padding: 0;backg=round-color: #ffffff;">
+                <tbody>
+                  <tr>
+                    <td class=3D"Header-left Target" style=3D"backg=round-color: #ffbc00;border: 0;border-collapse:
+                      collapse;margin: 0;padding:=0;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;f=ont-size: 0;line-height: 0px;mso-line-height-rule: exactly;background-size:=100%
+                      100%;border-top-left-radius: 5px;" align=3D"right" height=3D"156" val=ign=3D"bottom"
+                      width=3D"252">
+                      <a href=3D"http://email.mg.kommunity.com/c/=eJyNU9uK2zAQ_Rr7RcRYvqztBz_ksiEtmy20C32e2JNYG12CLLc4X99RtMuSLZSCkTWXozPnIHV=GqUkLN_-Q06m1CJ17HRdidKAPk4wvg3GmHZy7jFG-jLItfQp7Acn5HZh0RlG2e4sFjhR9PohS-A=u18zUKJbqLNea4QAVCjovfwg0L9ark4pjVVYlNR30Zb4rG81E-uehTjLrfgMOtsQqcw77lBduDd=SxLMx6_DzA_g8L2ux-AfXnXcSO_Sfwv9liMS2LQPZFsQY4Y9-iot32M1kXUbNGyHgZg0TqPVg-6=Q7Z72T8xXFwMMVK6pCY4SKMnNsDVg1bcSujDbh5Bh92VoTsLLcWZHSDAZKgEorBngxglWqHFFdm=VLNDMoe1u7GsFmhmppoB2k2VqGhwqlKgTtlTAZqGR9cgOwjLwoGUVzj1L8GW4KDizU5IkMU1v3T=9Mvvl4M3j14SMLPjLvI9t_3T_FRuMG5kff3L7YCcnPbyRSY4jI2J2ZbJuldKnSNFZtVuZpWtWB_=1bjdajRAGVHB7SeP815yrM05U3Ck01e53nVpEXRLBte1FGRqtP9vYyHtiAU5zlvKqyyh6rjdVml=xxK7rkGoKoxpyAnbqFpFWSbB0UrETJO8KFszn9Snv5OaPHjL0i-I83GoQt9bHMePhvsXNJvJTcm=BANuf-7Le4Rr659p3V5tYfnpu94JsOwoNGs4jzCT45J33hT9SizcO"
+                        style=3D"pointer-eve=nts: none;">
+                        <img alt=3D"" height=3D"156" width=3D"2=52" src=3D"https://kommunity.com/img/email/Left.png"
+                          style=3D"display: bloc=k;border: 0;line-height: 100%;width: 100%;">
+                      </a>
+                    </td>
+                    <td class=3D"Header-icon Target" style=3D"backg=round-color: #ffbc00;border: 0;border-collapse:
+                      collapse;margin: 0;padding:=0;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;f=ont-size: 0;line-height: 0px;mso-line-height-rule: exactly;background-size:=100%
+                      100%;" align=3D"center" height=3D"156" valign=3D"bottom" width=3D"96"=>
+                      <a href=3D"http://email.mg.kommunity.com/c/=eJyNU9uK2zAQ_Rr7RcRYvqztBz_ksiEtmy20C32e2JNYG12CLLc4X99RtMuSLZSCkTWXozPnIHV=GqUkLN_-Q06m1CJ17HRdidKAPk4wvg3GmHZy7jFG-jLItfQp7Acn5HZh0RlG2e4sFjhR9PohS-A=u18zUKJbqLNea4QAVCjovfwg0L9ark4pjVVYlNR30Zb4rG81E-uehTjLrfgMOtsQqcw77lBduDd=SxLMx6_DzA_g8L2ux-AfXnXcSO_Sfwv9liMS2LQPZFsQY4Y9-iot32M1kXUbNGyHgZg0TqPVg-6=Q7Z72T8xXFwMMVK6pCY4SKMnNsDVg1bcSujDbh5Bh92VoTsLLcWZHSDAZKgEorBngxglWqHFFdm=VLNDMoe1u7GsFmhmppoB2k2VqGhwqlKgTtlTAZqGR9cgOwjLwoGUVzj1L8GW4KDizU5IkMU1v3T=9Mvvl4M3j14SMLPjLvI9t_3T_FRuMG5kff3L7YCcnPbyRSY4jI2J2ZbJuldKnSNFZtVuZpWtWB_=1bjdajRAGVHB7SeP815yrM05U3Ck01e53nVpEXRLBte1FGRqtP9vYyHtiAU5zlvKqyyh6rjdVml=xxK7rkGoKoxpyAnbqFpFWSbB0UrETJO8KFszn9Snv5OaPHjL0i-I83GoQt9bHMePhvsXNJvJTcm=BANuf-7Le4Rr659p3V5tYfnpu94JsOwoNGs4jzCT45J33hT9SizcO"
+                        target=3D"_blank" st=yle=3D"-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                        graysca=le;outline: 0;text-decoration: none;">
+                        <img alt=3D"" height=3D"156" width=3D"9=6"
+                          src=3D"https://kommunity.com/img/email/twelve_degree_icon@2x.png" style==3D"display:
+                          block;border: 0;line-height: 100%;width: 100%;">
+                      </a>
+                    </td>
+                    <td class=3D"Header-right Target" style=3D"back=ground-color: #ffbc00;border: 0;border-collapse:
+                      collapse;margin: 0;padding=: 0;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;=font-size: 0;line-height: 0px;mso-line-height-rule: exactly;background-size=: 100%
+                      100%;border-top-right-radius: 5px;" align=3D"left" height=3D"156" va=lign=3D"bottom"
+                      width=3D"252">
+                      <a href=3D"http://email.mg.kommunity.com/c/=eJyNU9uK2zAQ_Rr7RcRYvqztBz_ksiEtmy20C32e2JNYG12CLLc4X99RtMuSLZSCkTWXozPnIHV=GqUkLN_-Q06m1CJ17HRdidKAPk4wvg3GmHZy7jFG-jLItfQp7Acn5HZh0RlG2e4sFjhR9PohS-A=u18zUKJbqLNea4QAVCjovfwg0L9ark4pjVVYlNR30Zb4rG81E-uehTjLrfgMOtsQqcw77lBduDd=SxLMx6_DzA_g8L2ux-AfXnXcSO_Sfwv9liMS2LQPZFsQY4Y9-iot32M1kXUbNGyHgZg0TqPVg-6=Q7Z72T8xXFwMMVK6pCY4SKMnNsDVg1bcSujDbh5Bh92VoTsLLcWZHSDAZKgEorBngxglWqHFFdm=VLNDMoe1u7GsFmhmppoB2k2VqGhwqlKgTtlTAZqGR9cgOwjLwoGUVzj1L8GW4KDizU5IkMU1v3T=9Mvvl4M3j14SMLPjLvI9t_3T_FRuMG5kff3L7YCcnPbyRSY4jI2J2ZbJuldKnSNFZtVuZpWtWB_=1bjdajRAGVHB7SeP815yrM05U3Ck01e53nVpEXRLBte1FGRqtP9vYyHtiAU5zlvKqyyh6rjdVml=xxK7rkGoKoxpyAnbqFpFWSbB0UrETJO8KFszn9Snv5OaPHjL0i-I83GoQt9bHMePhvsXNJvJTcm=BANuf-7Le4Rr659p3V5tYfnpu94JsOwoNGs4jzCT45J33hT9SizcO"
+                        style=3D"pointer-eve=nts: none;">
+                        <img alt=3D"" height=3D"156" width=3D"2=52" src=3D"https://kommunity.com/img/email/Right.png"
+                          style=3D"display: blo=ck;border: 0;line-height: 100%;width: 100%;">
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class=3D"Section Title" width=3D"100%" style=3D"=border: 0;border-collapse: collapse;margin:
+                0;padding: 0;background-color:=#ffffff;">
+                <tbody>
+                  <tr>
+                    <td class=3D"Spacer Spacer--gutter" width=3D"64=" style=3D" border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit=-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #fff=fff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;<=
+                        /td>
+                    <td class=3D"Content Title-copy Font Font--titl=e" align=3D"center" style=3D"border:
+                      0;border-collapse: collapse;margin: 0;=padding: 0;-webkit-font-smoothing:
+                      antialiased;-moz-osx-font-smoothing: gra=yscale;width: 472px;font-family: -apple-system,
+                      BlinkMacSystemFont, &#39;Se=goe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Ubuntu,
+                      sans-serif;mso-line-=height-rule: exactly;vertical-align: middle;color: #32325d;font-size:
+                      24px;=line-height: 32px;">
+                      Bulletproof emails with MJML
+                    </td>
+                    <td class=3D"Spacer Spacer--gutter" width=3D"64=" style=3D" border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit=-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #fff=fff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;<=
+                        /td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class=3D"Section Divider" width=3D"100%" style==3D"border: 0;border-collapse: collapse;margin:
+                0;padding: 0;background-col=or: #ffffff;">
+                <tbody>
+                  <tr>
+                    <td class=3D"Spacer Spacer--divider" height=3D"8"=style=3D"border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit-f=ont-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #fffff=f;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;
+                      </t= d>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class=3D"Section Title" width=3D"100%" style=3D"=border: 0;border-collapse: collapse;margin:
+                0;padding: 0;background-color:=#ffffff;">
+                <tbody>
+                  <tr>
+                    <td class=3D"Spacer Spacer--gutter" width=3D"64=" style=3D" border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit=-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #fff=fff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;<=
+                        /td>
+                    <td class=3D"Content Title-copy Font Font--titl=e" align=3D"center" style=3D"border:
+                      0;border-collapse: collapse;margin: 0;=padding: 0;-webkit-font-smoothing:
+                      antialiased;-moz-osx-font-smoothing: gra=yscale;width: 472px;font-family: -apple-system,
+                      BlinkMacSystemFont, &#39;Se=goe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Ubuntu,
+                      sans-serif;mso-line-=height-rule: exactly;vertical-align: middle;color: #8898aa;font-size:
+                      15px;=line-height: 18px;">
+                      <a style=3D"color: #8898aa;"
+                        href=3D"http:/=/email.mg.kommunity.com/c/eJyNU9tu2zAM_Rr7RYgh32b7wQ-5NMiGpgO2AntmLCZWI8mBL=G9wvn5U1KJoCgwDDJuXQx3yWOwGrScj3fxTTafWInTuZVzI0YE5TCq-9IMb2t65yxjlyyjb0qNR=SEjOb4VJN2iKdq--xJG8-4MohL_ROJ8jV6G72GE4LlCDVOPij3T9Qr9otThmdVVi0xEuS5ui8Xw=UTy7mFKMRG3C4HawG51C0acH2YB3LeJbGbw3MT6Cx_eEbYF_f5riR30b8L_ZYjktiMIJItqBGjA=U6wrYP0bqImi1aJqAHFq3zaPXFdMh2z_tHhovLQIwULgkEBzWYifVw9UWr1CoQwZpHMMG6MnRna=ZQ8swOEMhUygSjYrJejQiuNvCK7kgSGObTdjX2twbBB6SlUu8kyPfUONSo0CVtqYLM0yASyg7QM=fNGyCueeFfg0XDSc2SlJkpi6t-4fIt90vAm8eteRBR2Z15Htv-0f48HgBuYHD26f7YSk53ca0mD=wSNjdMNk243SpOI91m5U551Ud-G-5tA45aqDs6IDW8_M85WnGedokabLJ6zyvGl4UzbJJizoquD=59vJdx3wouoAQUvK6xKjOETMChgQIbcayxa2JqcsI2qlZRlilw9CZiZmi8KFszHzSnz0FDGrxG6=ROG837IghAWx_Ed8HGD5mFyU3Kggu2vfVnvcA3iqfboahOru3W7X7RPO2rbURowcB5hJg1O_md4=7F9I8T_X">React
+                        Istanbul</a>
+                    </td>
+                    <td class=3D"Spacer Spacer--gutter" width=3D"64=" style=3D" border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit=-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #fff=fff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;<=
+                        /td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class=3D"Section Divider" width=3D"100%" style==3D"border: 0;border-collapse: collapse;margin:
+                0;padding: 0;background-col=or: #ffffff;">
+                <tbody>
+                  <tr>
+                    <td class=3D"Spacer Spacer--divider" height=3D"24"=style=3D"border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit-=font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #ffff=ff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;
+                      </= td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class=3D"Section DataBlocks" width=3D"100%" styl=e=3D"border: 0;border-collapse: collapse;margin:
+                0;padding: 0;background-co=lor: #ffffff;width: 100%;">
+                <tbody>
+                  <tr>
+                    <td class=3D"Spacer Spacer--gutter" width=3D"64=" style=3D" border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit=-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #fff=fff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;<=
+                        /td>
+                    <td class=3D"Content" style=3D"border: 0;border=-collapse: collapse;margin: 0;padding:
+                      0;-webkit-font-smoothing: antialiase=d;-moz-osx-font-smoothing: grayscale;width: 472px;">
+                      <table class=3D"DataBlocks DataBlocks--thre=e" style=3D"border: 0;border-collapse:
+                        collapse;margin: 0;padding: 0;width:=100%;">
+                        <tbody>
+                          <tr>
+                            <td class=3D"DataBlocks-item" valig=n=3D"top" style=3D"border: 0;border-collapse:
+                              collapse;margin: 0;padding: 0=;-webkit-font-smoothing:
+                              antialiased;-moz-osx-font-smoothing: grayscale;">
+                              <table style=3D"border: 0;borde=r-collapse: collapse;margin: 0;padding: 0;">
+                                <tbody>
+                                  <tr>
+                                    <td class=3D"Font F=ont--caption Font--uppercase Font--mute Font--noWrap"
+                                      style=3D"border: 0;bo=rder-collapse: collapse;margin: 0;padding:
+                                      0;-webkit-font-smoothing: antial=iased;-moz-osx-font-smoothing:
+                                      grayscale;font-family: -apple-system, BlinkM=acSystemFont, &#39;Segoe UI&#39;,
+                                      Roboto, &#39;Helvetica Neue&#39;, Ubuntu,=sans-serif;mso-line-height-rule:
+                                      exactly;vertical-align: middle;color: #88=98aa;font-size: 12px;line-height:
+                                      16px;white-space: nowrap;font-weight: bol=d;text-transform: uppercase;">
+                                      TAR=C4=B0H
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td class=3D"Font F=ont--body Font--noWrap" style=3D"border: 0;border-collapse:
+                                      collapse;margin=: 0;padding: 0;-webkit-font-smoothing:
+                                      antialiased;-moz-osx-font-smoothing:=grayscale;font-family: -apple-system,
+                                      BlinkMacSystemFont, &#39;Segoe UI&#3=9;, Roboto, &#39;Helvetica Neue&#39;, Ubuntu,
+                                      sans-serif;mso-line-height-ru=le: exactly;vertical-align: middle;color:
+                                      #525f7f;font-size: 15px;line-heig=ht: 24px;white-space: nowrap;">
+                                      14 Mart 2021 18=
+                                      :00 - 20:00
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                            <td class=3D"Spacer DataBlocks-spac=er" width=3D"20" style=3D"border: 0;border-collapse:
+                              collapse;margin: 0;pad=ding: 0;-webkit-font-smoothing:
+                              antialiased;-moz-osx-font-smoothing: graysc=ale;color: #ffffff;font-size: 1px;line-height:
+                              1px;mso-line-height-rule: ex=actly;">&nbsp;</td>
+
+                            <td class=3D"DataBlocks-item" valig=n=3D"top" style=3D"border: 0;border-collapse:
+                              collapse;margin: 0;padding: 0=;-webkit-font-smoothing:
+                              antialiased;-moz-osx-font-smoothing: grayscale;">
+                              <table style=3D"border: 0;borde=r-collapse: collapse;margin: 0;padding: 0;">
+                                <tbody>
+                                  <tr rowspan=3D"2">
+                                    <td class=3D"Font Font-=-body Font--noWrap"
+                                      style=3D"word-wrap:break-word;border-collapse:collapse;=padding:0px;vertical-align:middle;text-align:center;color:rgb(255,255,255);=font-family:Helvetica,Arial,sans-serif;font-weight:500;margin:0;line-height=:1.3;font-size:16px;border:none;background:rgb(33,153,232);background-color=:rgb(26,30,33);border-radius:4px">
+                                      <a href=3D"http://e=mail.mg.kommunity.com/c/eJylU9uK2zAQ_Rr7RcTIshPbD37IZcO2bLbQLvR5Ys3G2khykOU=W5-s7irosu4VSKBhZc-ZyZg6abjBmssrP3_R0ah1C51_GhRo92OOk00s_-KHtvb-MSbFOxJ4-g1=JBdn5NzLrBENr9thWOZH0sRBD-QOuDj0yN_uKG4XmBBpQeFz-V7xfmxejFs6irJTYdxYm8KZvAR=3h2sacUrdyBx_3gDHiPss1LdgDnmeAiT18bmB_BYPs1NMA-vc5xI7-N-E_sqRrXxGAlkexBj5hK=9BTb3iXbMmn26JiEHliyLZLNynbI7p8ODwwXl4EYCV5SEBz1YCfWwzUkbXKnQcbbPIKNtytDf1Z=WqzM7QkzT0ROJ4p31atTolFVXZFeSwDKPrruxbw1YNmgzxWw_OWam3qNBjTZjawNsVhaZRHZUjk=FIWlex7llDcMPFwJmdsixLqXvn_yLyTcebwJs3HVnUkQUd2eHz4SEdLO5gvgvB7ZObkPT8QkNaj=BYJez9MrhWcHhXnqWnFsuC8qiP_zZfX0UcNLDsq0AZ-XuQ8F5znTZZnu6IuiqrhZdmsm7ysk5Kb=0_t3mfbtijd5VXRCrFZHWXUN1FWOUOKyqZ47IWVKTU7YJtUmEUKDp5OImaXxErFlAbSnP0FLGvx=G6ReHC3b0gpQOx_Et4P0GzcPkp-xICfvvh2V9j1uQj3WIrnap_rBuHxftv1crde2oLFg4jzCTaK=cQGIr_Au7PUBE"
+                                        style=3D"color:rgb(255,255,255);font-family:Helvetica,Arial,=sans-serif;font-weight:bold;padding:12px
+                                        32px;margin:0;text-align:left;line=-height:14px;text-decoration:none;border:none;vertical-align:baseline;font-=size:16px;display:inline-block;border-radius:3px;white-space:nowrap"
+                                        target==3D"_blank" data-saferedirecturl=3D"#">
+                                        Kat=C4=B1l
+                                      </a>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class=3D"Font Font--caption Fon=t--uppercase Font--mute Font--noWrap" style=3D"border:
+                              0;border-collapse: c=ollapse;margin: 0;padding: 0;-webkit-font-smoothing:
+                              antialiased;-moz-osx-f=ont-smoothing: grayscale;font-family: -apple-system,
+                              BlinkMacSystemFont, &#=39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Ubuntu,
+                              sans-serif;mso-=line-height-rule: exactly;vertical-align: middle;color:
+                              #8898aa;font-size:=12px;line-height: 16px;white-space: nowrap;font-weight:
+                              bold;text-transform=: uppercase; margin-top: 20px;display: block;">
+                              Adres
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p style=3D"margin: 0;-webkit-f=ont-smoothing: antialiased;-moz-osx-font-smoothing:
+                                grayscale;font-family:=-apple-system, BlinkMacSystemFont, 'Segoe UI' ,
+                                Roboto, 'Helvetica Neue' , Ub=untu, sans-serif;mso-line-height-rule:
+                                exactly;vertical-align: middle;color=: #525f7f;font-size: 15px;line-height: 24px;">
+                                <a style=3D"color: #525=f7f;"
+                                  href=3D"http://email.mg.kommunity.com/c/eJyNU12PmzAQ_DXwYgXZQAI88JCPi=9LqcpXak_q8wCb4YpvImFbk13cd3-l0rVSdhMC7O-vZGex20Hoy0s0_1HSuLULrXsaFHB2YZlLx=tR_cUPfOXccoW0fpnh6NnYTk8taYtIOmbPsaSxwp-nsjSuEvNM7XKFTornYYTgvUINW4-C1dv9A=vWi1OaVkssWoJl4oqrzwf5ZOrOcdouh043A9Wg3PY1SJnR7COpTwV8dsA8xNorL_7AdiXNx138r=vET7HHclwTg-mIZA9qxLhDR9j6IdrmUbVHyzrogUXbLNqsTIvs8Hx8ZLi4DsRI6SWBoFGDmVgPN=9-0EVZBF1bzCCasbgzdRRolL6yB0KZCJRCFNevlqNBKI2_IbmSBYQ5te2ffajBsUHoK3W6yTE-9=Q40KTcLWGtgsDbIOWSMtA9-0LsK-FwW-DFcNF3ZOkiSm6a37j8l3H-8Gb959ZMFH5n1kx6_Hx3g=wuIP5wYPrZzsh-fmNRBoMERl7GCZbp5wOFeexrtNlxnlRBv57TZShRgMsW9qg9vw8E1yknIsqEc=kuK7OsqHieV-tK5GWUc33-eC7jvhanZlW0Ast8JcplWrQZ8q5B4ILjKjt1MQ05YR0VmyhNFTh6E=zEzJC9Kt8wnzfnfpCEPXrP0CeJ8HKrQdRbH8R3w8QbNw-SmpKGG_c_jsjzgFrqn0qOLXazqz4Bj=W4_SgIHLCDMpP_tf4CX_AcMbOYg">
+                                  Online
+                                  <br>
+                                  Etkinli=C4=9Fe git
+                                </a>
+                              </p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                    <td class=3D"Spacer Spacer--gutter" width=3D"64=" style=3D" border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit=-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #fff=fff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;<=
+                        /td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+              <table class=3D"Section Divider" width=3D"100%" style==3D"border: 0;border-collapse: collapse;margin:
+                0;padding: 0;background-col=or: #ffffff;">
+                <tbody>
+                  <tr>
+                    <td class=3D"Spacer Spacer--divider" height=3D"32"=style=3D"border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit-=font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #ffff=ff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;
+                      </= td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class=3D"Section Copy" style=3D"border: 0;border=-collapse: collapse;margin: 0;padding:
+                0;background-color: #ffffff; @if(!is=set($photo)) margin-bottom: -25px; @endif">
+                <tbody>
+                  <tr>
+                    <td class=3D"Spacer Spacer--gutter" width=3D"64=" style=3D" border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit=-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #fff=fff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;<=
+                        /td>
+                    <td class=3D"Content Font Font--caption Font--u=ppercase Font--mute Delink" style=3D"border:
+                      0;border-collapse: collapse;ma=rgin: 0;padding: 0;-webkit-font-smoothing:
+                      antialiased;-moz-osx-font-smooth=ing: grayscale;width: 472px;font-family: -apple-system,
+                      BlinkMacSystemFont,=&#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Ubuntu,
+                      sans-serif;m=so-line-height-rule: exactly;vertical-align: middle;color: #8898aa;font-siz=e:
+                      12px;line-height: 16px;font-weight: bold;text-transform: uppercase;">
+                      Detaylar
+                    </td>
+                    <td class=3D"Spacer Spacer--gutter" width=3D"64=" style=3D" border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit=-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #fff=fff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;<=
+                        /td>
+                  </tr>
+                  <tr>
+                    <td class=3D"Spacer Spacer--divider" colspan=3D="3" height=3D"12" style=3D"border:
+                      0;border-collapse: collapse;margin: 0;pa=dding: 0;-webkit-font-smoothing:
+                      antialiased;-moz-osx-font-smoothing: grays=cale;color: #ffffff;font-size: 1px;line-height:
+                      1px;mso-line-height-rule: e=xactly;">&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class=3D"Section Copy" style=3D"border: 0;border=-collapse: collapse;margin: 0;padding:
+                0;background-color: #ffffff;">
+                <tbody>
+                  <tr>
+                    <td class=3D"Spacer Spacer--gutter" width=3D"64=" style=3D" border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit=-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #fff=fff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;<=
+                        /td>
+                    <td class=3D"Content Footer-help Font Font--bod=y" style=3D"border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webki=t-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;width: 472=px;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;,
+                      Robo=to, &#39;Helvetica Neue&#39;, Ubuntu, sans-serif;mso-line-height-rule:
+                      exac=tly;vertical-align: middle;color: #525f7f;font-size: 15px;line-height: 24px=;">
+                      <div class=3D"m_1386305593427107810event-in=tro__banner_photo"
+                        style=3D"margin:0px;padding:0px;border:0px;vertical-alig=n:baseline;height:180px;width:320px;background-size:cover;border-top-left-r=adius:4px;border-top-right-radius:4px;border-bottom-right-radius:4px;border=-bottom-left-radius:4px;background-image:url('https://media.kommunity.com/c=ommunities/reactjs-istanbul/events/bulletproof-emails-with-mjml-f2875e9c/21=949/mjml.png');background-position:center
+                        40%"></div>
+                      <table class=3D"Section Divider Divider--sm=all" width=3D"100%" style=3D"border:
+                        0;border-collapse: collapse;margin: 0;=padding: 0;background-color: #ffffff;">
+                        <tbody>
+                          <tr>
+                            <td class=3D"Spacer Space=r--divider" height=3D"20" style=3D"border: 0;border-collapse:
+                              collapse;marg=in: 0;padding: 0;-webkit-font-smoothing:
+                              antialiased;-moz-osx-font-smoothin=g: grayscale;color: #ffffff;font-size: 1px;line-height:
+                              1px;mso-line-height=-rule: exactly;">&nbsp;</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      E=C4=9Fer daha =C3=B6nce HTML e-posta =C5=
+                      =9Fablonu haz=C4=B1rlad=C4=B1ysan=C4=B1z etkinlik ba=C5=9Fl=C4=B1=C4=9F=C4=
+                      =B1 hislerinize zaten terc=C3=BCman olmu=C5=9Ftur muhtemelen. Ama yine de b=
+                      ir a=C3=A7=C4=B1klama yapmak g... <a
+                        href=3D"http://email.mg.kommunity.com/=c/eJylU9uK2zAQ_Rr7RcTIshPbD37IZcO2bLbQLvR5Ys3G2khykOUW5-s7irosu4VSKBhZc-ZyZ=g6abjBmssrP3_R0ah1C51_GhRo92OOk00s_-KHtvb-MSbFOxJ4-g1JBdn5NzLrBENr9thWOZH0s=RBD-QOuDj0yN_uKG4XmBBpQeFz-V7xfmxejFs6irJTYdxYm8KZvAR3h2sacUrdyBx_3gDHiPss1=LdgDnmeAiT18bmB_BYPs1NMA-vc5xI7-N-E_sqRrXxGAlkexBj5hK9BTb3iXbMmn26JiEHliyLZ=LNynbI7p8ODwwXl4EYCV5SEBz1YCfWwzUkbXKnQcbbPIKNtytDf1ZWqzM7QkzT0ROJ4p31atTol=FVXZFeSwDKPrruxbw1YNmgzxWw_OWam3qNBjTZjawNsVhaZRHZUjkFIWlex7llDcMPFwJmdsixL=qXvn_yLyTcebwJs3HVnUkQUd2eHz4SEdLO5gvgvB7ZObkPT8QkNajBYJez9MrhWcHhXnqWnFsuC=8qiP_zZfX0UcNLDsq0AZ-XuQ8F5znTZZnu6IuiqrhZdmsm7ysk5Kb0_t3mfbtijd5VXRCrFZHWX=UN1FWOUOKyqZ47IWVKTU7YJtUmEUKDp5OImaXxErFlAbSnP0FLGvxG6ReHC3b0gpQOx_Et4P0Gz=cPkp-xICfvvh2V9j1uQj3WIrnap_rBuHxftv1crde2oLFg4jzCTaKcQGIr_Au7PUBE"
+                        style==3D"color:rgb(255,188,0);" target=3D"_blank" data-saferedirecturl=3D"#">Dah=
+                        a fazla</a>
+                    </td>
+                    <td class=3D"Spacer Spacer--gutter" width=3D"64=" style=3D" border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit=-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #fff=fff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;<=
+                        /td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class=3D"Section Divider" width=3D"100%" style==3D"border: 0;border-collapse: collapse;margin:
+                0;padding: 0;background-col=or: #ffffff;">
+                <tbody>
+                  <tr>
+                    <td class=3D"Spacer Spacer--divider" height=3D"32"=style=3D"border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit-=font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #ffff=ff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;
+                      </= td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class=3D"Section Separator" width=3D"100%" style==3D"border: 0;border-collapse: collapse;margin:
+                0;padding: 0;background-col=or: #ffffff;">
+                <tbody>
+                  <tr>
+                    <td class=3D"Spacer Spacer--gutter" width=3D"64=" style=3D" border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit=-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #fff=fff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;<=
+                        /td>
+                    <td class=3D"Spacer" bgcolor=3D"e6ebf1" height==3D"1" style=3D"border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-w=ebkit-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color:=#ffffff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&n=
+                      bsp;</td>
+                    <td class=3D"Spacer Spacer--gutter" width=3D"64=" style=3D" border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit=-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #fff=fff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;<=
+                        /td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class=3D"Section Divider" width=3D"100%" style==3D"border: 0;border-collapse: collapse;margin:
+                0;padding: 0;background-col=or: #ffffff;">
+                <tbody>
+                  <tr>
+                    <td class=3D"Spacer Spacer--divider" height=3D"32"=style=3D"border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit-=font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #ffff=ff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;
+                      </= td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- footer -->
+              <table class=3D"Section Copy" style=3D"border: 0;border=-collapse: collapse;margin: 0;padding:
+                0;background-color: #ffffff;">
+                <tbody>
+                  <tr>
+                    <td class=3D"Spacer Spacer--gutter" width=3D"64=" style=3D" border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit=-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #fff=fff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;<=
+                        /td>
+                    <td class=3D"Content Footer-legal Font Font--ca=ption Font--mute" style=3D"border:
+                      0;border-collapse: collapse;margin: 0;pa=dding: 0;-webkit-font-smoothing:
+                      antialiased;-moz-osx-font-smoothing: grays=cale;width: 472px;font-family: -apple-system,
+                      BlinkMacSystemFont, &#39;Sego=e UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Ubuntu,
+                      sans-serif;mso-line-he=ight-rule: exactly;vertical-align: middle;color: #8898aa;font-size:
+                      12px;li=ne-height: 16px;">
+                      <p>Kommunity.com =C3=BCyeli=C4=9Finiz oldu=
+                        =C4=9Fu i=C3=A7in bu e-postay=C4=B1 al=C4=B1yorsunuz.</p>
+                      <p><a
+                          href=3D"http://email.mg.kommunity.com=/c/eJyNU9uOm0AM_Rp4GQXBQAI88JDLRmm12UrtSn02YMJs5hLNDK2Sr6_J7Gq1W6mqhGBsH_vY=h3FnlJq08Ncfcjo1FqHzL24hnAfdTjK-jMabZvT-4qJ8HfE9PQp7Acn5LTHpjCJv92oLdGR9LkQ=u_IXazzEyJfqLNWZYoAIh3eK38ONCvSi5GHhVLrHuCMezuqhnPvInF32KUfc78Lg3VoH32DdZwY=5gPeMpz-K3Bq5PoLD5PjfAvrzNcSe_j_hf7LFwa2LQPZHsQTqMe_SEbR6ibRHVe7SshxFYtM2jz=Up3yA7Px0eGi4shRnIvCQStNHpiI9zmpE1mJfThdHWgw-nG0J-FluLMWghpMkQCUTizUTiJVmhx=Q3YjCTTzaLs7-1aBZkaqKWT7yTI1jR4VStQJWytgV6GR9chaYRnMSesy1D1LmMNwUXBmpyRJYur=e-n-IfNfxLvDmXUcWdGSzjuz49fgYG407uD7M4ObZTkh6fqMhNQaLhD2YyTY8pUuVprFq-DJP07=IK_PdYVoUYNbDsqEAz86d5lmY8TbM6yZJdXuV5WadFUa_rrKiiIlWnj_cyHpu2atMhW2UVh1W7L=Abedi0VKruB9wNf1TE1OWETlZuIcwme3kTMNI0X8S2bnfr0t1OTBq9e-oThZjtEoe8tOvcO-LhB=VzP5KWkpYf_zuKwOuIX-qZrR5S6Wn9bt86LR9lGTe228GEQHXhjtYts4oUHD2cGVdDjNP2TG_wF=PY0AV"
+                          target=3D"_blank" style=3D"text-decoration: underline!important; col=or: #8898aa;">Bildirim
+                          ayarlar=C4=B1n=C4=B1z=C4=B1</a> profilinizden g=C3=
+                        =BCncelleyebilirsiniz.</p>
+                    </td>
+                    <td class=3D"Spacer Spacer--gutter" width=3D"64=" style=3D" border: 0;border-collapse:
+                      collapse;margin: 0;padding: 0;-webkit=-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      grayscale;color: #fff=fff;font-size: 1px;line-height: 1px;mso-line-height-rule: exactly;">&nbsp;<=
+                        /td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class=3D"Section Section--last Divider Divider--=large" width=3D"100%" style=3D"border:
+                0;border-collapse: collapse;margin:=0;padding: 0;background-color: #ffffff;border-bottom-left-radius:
+                5px;borde=r-bottom-right-radius: 5px;">
+                <tbody>
+                  <tr>
+                    <td class=3D"Spacer Spacer--divider=" height=3D" 64" style=3D"border: 0;border-collapse:
+                      collapse;margin: 0;padd=ing: 0;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing:
+                      graysca=le;color: #ffffff;font-size: 1px;line-height: 1px;mso-line-height-rule: exa=ctly;">&nbsp;
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- /background -->
+  </div>
+
+  <img width=3D"1px" height=3D"1px" alt=3D""
+    src=3D"http://email.mg.kommunity=.com/o/eJyNU9uOmzAQ_Rp4GQWBgQ088JDLRmm12UrtSn2ewCR4Y5vImFbJ13ccN4q2lapKCIYz=N5-ZYzl-MUoaat7sRDGZbjtMthFplC_SNO6arGwpbgetJyPd5Zuajo0lbN37OJOjQ7OfVEw_yLi=bi_8UubMdhsOMNEo1zn5K18_0u1azg6jmJdVt3DcHsW_F4QmpOrSUE7VVVYucOqISi6zM444cZz=fP0aqI6g1Z6LBHiFZ5tHwyLcH2bfcCNDsPfAaGSw7CvRrMBD1efdIyswq7YF1GNMG6ArmTZMIn2=GNIU8ETGgUbejkqstLIK8EVHRlwZNtb95VGA4PSU8h2kwU99Y40KTIJLDTChccJHcFeWkCftJiH=uieF3o1njSc4JkkS60aUeZrOq5h5WLfmXpvBanSOePQF7BgEkYrMb-ZfXr-BV9TULB8bgLAB8Bu=A3efdS8xREzXRfBkJodDxm9cMhlMisQIPmuPfoOG6v1H-BLn4_-DFrrM0jo-A3rnzyHYkNvxchs=lNyZ4TNt93ZbWlFXavlY-er2M5LpiL6ZjOBtVIsW1GadDgacRLVKRHTyBh9T0UeCP51SsQPt31N=xha4-XZzyDI-NwPbmg-HkRTJzE53ev4qoze60piBps_lc3QbbLe91_S5jiR1UXt-zGenM0xlo1f=UZpnaSbSNKuTLFnnVZ7P67Qo6kWdFRVT1cePZwuCuF3GrLpdxl-5ly5i">
+</body>
+<auto-scro= ll>
+  </auto-scroll>
+
+</html>
