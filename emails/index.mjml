@@ -1,0 +1,60 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+    <mj-title>This is the title.</mj-title>
+    <mj-all font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"></mj-all>
+    <mj-class name="greeting-text" font-size="19px" color="#333" font-weight="600"></mj-class>
+    <mj-class name="body-text" font-size="16px" line-height="22px" color="#5A5A5E"></mj-class>
+    <mj-class name="cta-button" width="100%" background-color="#7178F8" font-weight="500" font-size="15px"></mj-class>
+    <mj-class name="nav-link" text-transform="default" color="#FFFFFF"></mj-class>
+    </mj-attributes>
+    <mj-style inline="inline">
+      .outer-card {
+        box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.80);
+        border-radius: 3px;
+        overflow: hidden;
+      }
+    </mj-style>
+  </mj-head> 
+  <mj-body width="480px" background-color="#102445">
+    <mj-wrapper>
+      <mj-section padding="0">
+        <mj-column>
+          <mj-image src="https://raw.githubusercontent.com/react-istanbul/bulletproof-emails-with-mjml/main/assets/react-istanbul-logo.png" width="150px"></mj-image>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    <mj-wrapper background-color="white" css-class="outer-card">
+      <mj-section padding="0">
+        <mj-column>
+          <mj-image src="https://raw.githubusercontent.com/react-istanbul/bulletproof-emails-with-mjml/main/assets/bulletproof-emails.jpg" width="400px"></mj-image>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-text mj-class="greeting-text">Hello Sinan,</mj-text>
+          <mj-text mj-class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt cursus dapibus. Etiam finibus mollis lectus in hendrerit. Nulla sagittis dictum sem vel gravida. Nullam quis leo et lacus tincidunt tristique. Cras nec consectetur magna, ac euismod enim. Suspendisse potenti. Maecenas porttitor.</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding-top="0" padding-bottom="0">
+        <mj-column>
+          <mj-button mj-class="cta-button" href="https://www.youtube.com/watch?v=dnVxRi1QNoA">
+            Watch the event now!
+          </mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    <mj-wrapper>
+      <mj-section>
+        <mj-column>
+            <mj-navbar base-url="https://mjml.io" >
+            <mj-navbar-link href="/gettings-started-onboard" mj-class="nav-link" text-transform="default">Getting started</mj-navbar-link>
+            <mj-navbar-link mj-class="nav-link" href="/try-it-live" >Try it live</mj-navbar-link>
+            <mj-navbar-link href="/templates" mj-class="nav-link">Templates</mj-navbar-link>
+            <mj-navbar-link href="/components" mj-class="nav-link">Components</mj-navbar-link>
+        </mj-navbar>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>
